@@ -7,7 +7,6 @@ public class matrix {
     public matrix(int rows, int cols) {
         matrix = new int[rows][cols];
     }
-
     public void fillMatrixManually(Scanner scanner) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -16,8 +15,6 @@ public class matrix {
             }
         }
     }
-
-
     public void fillMatrixRandomly() {
         Random random = new Random();
         for (int i = 0; i < matrix.length; i++) {
@@ -26,8 +23,6 @@ public class matrix {
             }
         }
     }
-
-
     public void printMatrix() {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -36,8 +31,6 @@ public class matrix {
             System.out.println();
         }
     }
-
-
     public int findMin() {
         int min = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
@@ -49,8 +42,6 @@ public class matrix {
         }
         return min;
     }
-
-
     public int findMax() {
         int max = matrix[0][0];
         for (int i = 0; i < matrix.length; i++) {
@@ -62,8 +53,6 @@ public class matrix {
         }
         return max;
     }
-
-
     public double calculateAverage() {
         int sum = 0;
         int count = 0;
@@ -75,31 +64,21 @@ public class matrix {
         }
         return (double) sum / count;
     }
-
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-
         System.out.println("Enter number of rows (max 20): ");
         int rows = scanner.nextInt();
         System.out.println("Enter number of columns (max 20): ");
         int cols = scanner.nextInt();
-
         if (rows > 20 || cols > 20) {
             System.out.println("The size of the matrix is too large. Max size is 20x20.");
             return;
         }
-
-
         matrix matrix = new matrix(rows, cols);
-
-
         System.out.println("Choose how to fill the matrix:");
         System.out.println("1. Manually");
         System.out.println("2. Randomly");
         int choice = scanner.nextInt();
-
         if (choice == 1) {
             matrix.fillMatrixManually(scanner);
         } else if (choice == 2) {
@@ -108,16 +87,10 @@ public class matrix {
             System.out.println("Invalid choice!");
             return;
         }
-
-
         matrix.printMatrix();
-
-
         int min = matrix.findMin();
         int max = matrix.findMax();
         double average = matrix.calculateAverage();
-
-
         System.out.println("Minimum value: " + min);
         System.out.println("Maximum value: " + max);
         System.out.println("Average value: " + average);
