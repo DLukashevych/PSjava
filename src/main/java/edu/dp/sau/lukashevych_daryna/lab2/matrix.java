@@ -7,7 +7,7 @@ public class matrix {
     public matrix(int rows, int cols) {
         matrix = new int[rows][cols];
     }
-    public void fillMatrixManually(Scanner scanner) {
+    public void MatrixManually(Scanner scanner) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.println("Enter value for element [" + i + "][" + j + "]: ");
@@ -15,7 +15,7 @@ public class matrix {
             }
         }
     }
-    public void fillMatrixRandomly() {
+    public void MatrixRandomly() {
         Random random = new Random();
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
@@ -80,9 +80,9 @@ public class matrix {
         System.out.println("2. Randomly");
         int choice = scanner.nextInt();
         if (choice == 1) {
-            matrix.fillMatrixManually(scanner);
+            matrix.MatrixManually(scanner);
         } else if (choice == 2) {
-            matrix.fillMatrixRandomly();
+            matrix.MatrixRandomly();
         } else {
             System.out.println("Invalid choice!");
             return;
