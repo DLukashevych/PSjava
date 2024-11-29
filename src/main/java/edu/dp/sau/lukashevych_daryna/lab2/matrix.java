@@ -19,7 +19,7 @@ public class matrix {
         Random random = new Random();
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = random.nextInt(201) - 100;  // Випадкові числа від -100 до 100
+                matrix[i][j] = random.nextInt(201) - 100;
             }
         }
     }
