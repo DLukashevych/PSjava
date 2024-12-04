@@ -14,4 +14,8 @@ public class Human {
         this.patronymicName = patronymicName;
         this.sex=sex;
     }
+    @Override
+    public String toString() {
+        return String.format("%s %s %s (%s)", firstName, lastName, patronymicName, sex);
+    }
 }
