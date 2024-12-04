@@ -9,6 +9,6 @@ public class run {
         UniversityCreator universityCreator = new UniversityCreator();
         University university = universityCreator.create();
         UniversityPrinter printer = new UniversityPrinter();
-        printer.printUniversityDetails(university)
+        printer.printUniversityDetails(university);
     }
 }
